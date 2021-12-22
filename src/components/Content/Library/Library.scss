@@ -1,0 +1,115 @@
+.library {
+  margin-bottom: 50px;
+  padding: 3px;
+  &-navbar::-webkit-scrollbar {
+    width: 0;
+  }
+  &-navbar {
+    position: sticky;
+    top: 82px;
+    height: 465px;
+    padding: 15px;
+    overflow: auto;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+    border: 1px solid #a4a1a1;
+
+    &-item {
+      span {
+        padding: 10px 0px;
+      }
+      span:hover {
+        text-decoration: underline;
+        color: rgb(0, 0, 197);
+        cursor: pointer;
+      }
+    }
+  }
+  &-data {
+    &-img {
+      img {
+        width: 100%;
+        cursor: pointer;
+      }
+      p {
+        font-style: italic;
+        font-size: 10px;
+        padding: 5px 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width : 940px){
+  .library-navbar{
+    top: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .library {
+    position: relative;
+    .row {
+      .col-md-4 {
+        position: sticky;
+        top: 25px;
+        z-index: 1;
+      }
+    }
+    &-navbar {
+      padding: 5px;
+      height: 100%;
+      border-radius: 0;
+      background-color:rgb(159, 159, 159);
+      &-button {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        .left::after,
+        .left::before,
+        .right::after,
+        .right::before {
+          margin: 2px;
+          content: "";
+          height: 2px;
+          background-color: rgb(40, 50, 120);
+          width: 30px;
+          display: block;
+          transition: all 0.3s ease;
+        }
+        .left::after,
+        .left::before {
+          transform: rotate(15deg);
+        }
+        .right::after,
+        .right::before {
+          transform: rotate(-15deg);
+        }
+      }
+      &-group {
+        height: 0;
+        overflow: hidden;
+        transition: all ease 0.3s;
+        padding: 0;
+      }
+      .button-toggle {
+        .left::after,
+        .left::before {
+          transform: rotate(-15deg);
+        }
+        .right::after,
+        .right::before {
+          transform: rotate(15deg);
+        }
+      }
+      .group-toggle{
+        div{
+          display: flex;
+        }
+        span{
+          width: 100%;
+        }
+        height: 460px;;
+      }
+    }
+  }
+}

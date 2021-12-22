@@ -1,0 +1,83 @@
+$textContact: rgb(236, 211, 143);
+
+.footer {
+  background: url(https://ttuhaanogithubb9998.github.io/astronomy/img/logo/bgjpg.jpg);
+  padding: 20px;
+  .logo {
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    // justify-content: space-around;
+    align-items: center;
+    &-img {
+      width: 5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        transform: scale(1.3);
+      }
+    }
+    &-name {
+      color: azure;
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0px 20px;
+      letter-spacing: 20px;
+    }
+  }
+  .contact {
+    margin-bottom: 20px;
+    color: $textContact;
+    display: flex;
+    flex-direction: column;
+    div {
+      margin-bottom: 10px;
+      display: flex;
+      i {
+        padding-right: 10px;
+      }
+    }
+    div:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      i{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .form-comment {
+    background: #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    &-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        border: none;
+        border-radius: 4px;
+        background-color:rgb(248, 248, 248);
+      }
+      input:focus {
+        border: 1px rgb(0, 89, 255) solid;
+        background-color: rgb(255, 255, 255);
+        outline: none;
+      }
+      p {
+        height: 15px;
+        padding: 0px 5px;
+        font-size: 10px;
+        color: red;
+      }
+      textarea {
+        height: 70px;
+      }
+    }
+    &-btn {
+      text-align: right;
+    }
+  }
+}
