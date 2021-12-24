@@ -1,7 +1,8 @@
-.row{
+.row {
   margin: 0px;
-  .col,.col-sm-12{
-    padding: 0px 5px
+  .col,
+  .col-sm-12 {
+    padding: 0px 5px;
   }
 }
 .content {
@@ -11,13 +12,9 @@
     width: 100%;
     overflow-x: hidden;
     padding-top: 134px;
-    .banner-img {
-      // margin: 0px;
-    }
   }
   &-2 {
     width: 100%;
-    // overflow-x: hidden;
     padding: 5px;
     margin-top: 50px;
     &-right {
@@ -147,6 +144,7 @@
   &-3 {
     width: 100%;
     overflow-x: hidden;
+    padding: 5px;
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.639) 50%,
