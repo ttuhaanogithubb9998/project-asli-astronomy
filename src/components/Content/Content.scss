@@ -1,10 +1,23 @@
+.row{
+  margin: 0px;
+  .col,.col-sm-12{
+    padding: 0px 5px
+  }
+}
 .content {
   width: 100%;
   background-color: #dbdbdb;
-  &-1{
-  padding-top:134px;
+  &-1 {
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 134px;
+    .banner-img {
+      // margin: 0px;
+    }
   }
   &-2 {
+    width: 100%;
+    // overflow-x: hidden;
     padding: 5px;
     margin-top: 50px;
     &-right {
@@ -23,33 +36,33 @@
         }
         &-btn {
           text-align: right;
-          button{
-              height: 25px;
-              padding : 0px ;
-              margin : 0px;
-              font-size: 12px;
-              width: 60px;
-              align-items: center;
-              line-height: 25px;
+          button {
+            height: 25px;
+            padding: 0px;
+            margin: 0px;
+            font-size: 12px;
+            width: 60px;
+            align-items: center;
+            line-height: 25px;
           }
         }
-        &-modal{
-          &-bg{
+        &-modal {
+          &-bg {
             display: none;
             position: fixed;
             top: 0;
             right: 0;
             height: 100%;
             width: 100%;
-            background:rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
           }
           .form-comment {
             z-index: 10;
             transition: ease 0.3s;
-            height:0px;
+            height: 0px;
             padding: 0;
             overflow: hidden;
-            position: fixed;      
+            position: fixed;
             width: 40%;
             top: 10rem;
             left: 30%;
@@ -59,11 +72,11 @@
               width: 100%;
               display: flex;
               flex-direction: column;
-        
+
               input {
                 border: none;
                 border-radius: 4px;
-                background-color:rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
               }
               input:focus {
                 border: 1px rgb(0, 89, 255) solid;
@@ -84,11 +97,10 @@
               text-align: right;
             }
           }
-
         }
       }
       .list-news {
-        background-color: rgb(233,233,233);
+        background-color: rgb(233, 233, 233);
         border-radius: 4px;
         border: 1px solid rgb(164, 161, 161);
         margin: 50px 0px;
@@ -100,15 +112,14 @@
         }
 
         &-title {
-          border-bottom: 1px solid rgb(145,0,0);
+          border-bottom: 1px solid rgb(145, 0, 0);
           text-align: center;
           padding: 2px;
-          color: rgb(145,0,0);
+          color: rgb(145, 0, 0);
           font-size: 18px;
           font-weight: 500;
-          letter-spacing:5px;
+          letter-spacing: 5px;
           text-transform: uppercase;
-
         }
         &-group {
           margin-bottom: 10px;
@@ -123,7 +134,7 @@
               height: 60px;
               object-fit: cover;
             }
-            p { 
+            p {
               font-size: 11px;
               font-weight: 500;
               margin-left: 5px;
@@ -133,33 +144,39 @@
       }
     }
   }
-  &-3{
-    background:linear-gradient(to top,rgba(0, 0, 0, 0.639) 50% ,rgba(0, 0, 0, 0.646)) ,url(https://ttuhaanogithubb9998.github.io/astronomy/img/banner/5.jpg);
+  &-3 {
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.639) 50%,
+        rgba(0, 0, 0, 0.646)
+      ),
+      url(https://ttuhaanogithubb9998.github.io/astronomy/img/banner/5.jpg);
     background-size: cover;
-    .random-news{
-      padding:20px 0px;
-      .col{
+    .random-news {
+      padding: 20px 0px;
+      .col {
         margin-bottom: 20px;
-
       }
-      .card{
-        background-color:lightgray;
+      .card {
+        background-color: lightgray;
         border-radius: 5px;
         overflow: hidden;
         height: 100%;
-        img{
+        img {
           cursor: pointer;
           height: 150px;
         }
-        .card-body{
-          padding:5px ;
+        .card-body {
+          padding: 5px;
           padding-bottom: 20px;
         }
-        p{
+        p {
           font-size: 13px;
           text-align: initial;
           margin: 0;
-          padding :0;
+          padding: 0;
           width: 100%;
           font-weight: 500;
         }
@@ -168,9 +185,9 @@
   }
 }
 @media screen and (max-width: 940px) {
-  .content{
-    &-1{
-      padding-top:25px;
+  .content {
+    &-1 {
+      padding-top: 25px;
     }
     &-2-right {
       top: -190px;

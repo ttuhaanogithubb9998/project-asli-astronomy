@@ -8,7 +8,7 @@ function FormComment(props) {
         f.children[3].children[1].children[4].children[0].value = message;
         f.children[3].children[0].style.display = 'block'
         f.children[3].children[1].style.height = 'auto'
-        f.children[3].children[1].style.padding = '20px'
+        f.children[3].children[1].style.padding = '2%'
     }
     const closeForm = (e)=>{
         let f = e.target.parentElement.parentElement

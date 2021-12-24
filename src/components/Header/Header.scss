@@ -10,6 +10,9 @@ $bgContent: rgb(226, 226, 226);
   // margin-top: -74px;
   transition: ease 0.3s;
   width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 11;
   position: fixed;
   .search {
@@ -228,10 +231,10 @@ $bgContent: rgb(226, 226, 226);
       &-button {
         cursor: pointer;
         background: $bgMenu;
-        height: 25px;
+        height: 30px;
         display: block;
         align-items: center;
-        padding: 5px 0px 0px 5px;
+        padding: 10px 0px 0px 5px;
         z-index: 11;
         transition: all ease 0.3s;
         span {
