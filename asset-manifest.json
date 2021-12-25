@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/project-asli-astronomy/static/css/main.ea0f86d1.chunk.css",
+    "main.css": "/project-asli-astronomy/static/css/main.dab4d8ec.chunk.css",
     "main.js": "/project-asli-astronomy/static/js/main.246a531f.chunk.js",
     "main.js.map": "/project-asli-astronomy/static/js/main.246a531f.chunk.js.map",
     "runtime-main.js": "/project-asli-astronomy/static/js/runtime-main.2251f242.js",
@@ -8,7 +8,7 @@
     "static/js/2.ee4260b3.chunk.js": "/project-asli-astronomy/static/js/2.ee4260b3.chunk.js",
     "static/js/2.ee4260b3.chunk.js.map": "/project-asli-astronomy/static/js/2.ee4260b3.chunk.js.map",
     "index.html": "/project-asli-astronomy/index.html",
-    "static/css/main.ea0f86d1.chunk.css.map": "/project-asli-astronomy/static/css/main.ea0f86d1.chunk.css.map",
+    "static/css/main.dab4d8ec.chunk.css.map": "/project-asli-astronomy/static/css/main.dab4d8ec.chunk.css.map",
     "static/js/2.ee4260b3.chunk.js.LICENSE.txt": "/project-asli-astronomy/static/js/2.ee4260b3.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/project-asli-astronomy/static/media/1.ff75905c.jpg",
     "static/media/1.png": "/project-asli-astronomy/static/media/1.fdd5792b.png",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.2251f242.js",
     "static/js/2.ee4260b3.chunk.js",
-    "static/css/main.ea0f86d1.chunk.css",
+    "static/css/main.dab4d8ec.chunk.css",
     "static/js/main.246a531f.chunk.js"
   ]
 }
