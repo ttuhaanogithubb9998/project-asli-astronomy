@@ -76,5 +76,11 @@ $bgContent: rgb(226, 226, 226);
   }
   
 }
-
+@media screen and (max-width: 567px){
+  .home{
+    .title{
+      letter-spacing:10px
+    }
+  }
+}
 
