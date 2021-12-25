@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{ useEffect} from 'react';
+
 import './Content.scss'
 
 
@@ -14,12 +15,19 @@ import FormComment from './FormComment'
 
 function Content({ action, handleEventAction,itemKey }) {
     let _action = JSON.parse(action);
+    useEffect(()=>{
+        if(_action.key === "Home") {
+            document.querySelector('.content-2').style.overflowX = 'hidden';
+        }else{
+            document.querySelector('.content-2').style.overflowX = '';
+        }
+    },[_action])
     return (
         <div className="content">
             <div className="content-1">
                 {_action.key === "Home" && <Banner handleEventAction={handleEventAction}/>}
             </div>
-            <div className="content-2">
+            <div className="content-2" >
                 <div className="row">
                     <div className="col-md-9 col-sm-12">
                         {_action.key === "Home" &&
