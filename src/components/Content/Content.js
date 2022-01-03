@@ -16,7 +16,7 @@ import FormComment from './FormComment'
 function Content({ action, handleEventAction,itemKey }) {
     let _action = JSON.parse(action);
     useEffect(()=>{
-        if(_action.key === "Home") {
+        if(_action.key === "Home"&&window.innerWidth<766) {
             document.querySelector('.content-2').style.overflowX = 'hidden';
         }else{
             document.querySelector('.content-2').style.overflowX = '';
