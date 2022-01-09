@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LibraryData({data}) {
+function LibraryContent({data}) {
     return (
         <div className = 'library-data'>
             <h4 className = 'library-data-title'>{data.product_item_title}</h4>
@@ -24,4 +24,4 @@ function LibraryData({data}) {
     );
 }
 
-export default React.memo(LibraryData);
+export default React.memo(LibraryContent);

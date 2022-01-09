@@ -123,6 +123,7 @@
           height: 400px;
           overflow-y: auto;
           &-item {
+            color: rgb(0, 0, 0);
             cursor: pointer;
             margin-bottom: 10px;
             display: flex;
@@ -137,6 +138,10 @@
               margin-left: 5px;
             }
           }
+          &-item:hover {
+            color: rgb(8, 6, 84);
+          }
+
         }
       }
     }

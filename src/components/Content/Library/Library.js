@@ -1,45 +1,39 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import './Library.scss';
-
+import { useParams, Routes, Route } from "react-router-dom";
 import { libraryData } from '../../../data/libraryData'
 
 import LibraryNavbar from './LibraryNavbar';
-import LibraryData from './LibraryData';
+import LibraryContent from './LibraryContent';
 
 
 
 
-function Library({ action,itemKey }) {
-    const data = libraryData.find(item => item.product_id === action)
-    const [keyId, setKeyId] = useState(data.product__data[0].product_item_id);
-    const [dataContent, setDataContent] = useState(data.product__data.find(d => d.product_item_id === keyId));
-    
-    useEffect(() => {
-        setKeyId(data.product__data[0].product_item_id);
-    }, [data])
+function Library() {
+    let action = useParams()['*'];
+    if (action.includes('/')) {
+        action = action.slice(0, action.indexOf('/'))
+    }
+    const data = libraryData.find(item => item.product_id === action.replace('_', ' '));
 
-    useEffect(() => {
-
-        itemKey && setKeyId(itemKey);
-    },[itemKey])
-
-    useEffect(() => {
-        setDataContent(data.product__data.find(d => d.product_item_id === keyId))
-    }, [keyId])
-
-    const handleKey = useCallback((key) => {
-        setKeyId(key);
-        window.scrollTo(0, 0)
-    },[])
+    if (data === undefined) {
+        window.location.pathname = '/notfound';
+        return ''
+    }
 
     return (
         <div className="library">
             <div className="row">
                 <div className="col-md-4 ">
-                    <LibraryNavbar data={data} handleKey={handleKey} />
+                    <LibraryNavbar data={data} path={action} />
                 </div>
                 <div className="col-md-8 ">
-                    <LibraryData data={dataContent} />
+                    <Routes>
+                        <Route path={`/${action}`} element={<LibraryContent data={data.product__data[0]} />} />
+                        {data.product__data.map(item => {
+                            return <Route key={item} path={`/${action}/${item.product_item_id}`} element={<LibraryContent data={item} />} />
+                        })}
+                    </Routes>
                 </div>
             </div>
         </div>

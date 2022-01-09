@@ -322,7 +322,7 @@ export const libraryData =
             "product__data":
                 [
                     {
-                        'product_item_id': 'Solar System overview',
+                        'product_item_id': 'Solar_System_overview',
                         "product_item_title": 'Solar System overview',
                         'src_img_item': './img/solar_system/1.jpg',
                         "img_caption": 'solar system',
@@ -620,7 +620,7 @@ export const libraryData =
             "product__data":
                 [
                     {
-                        'product_item_id': 'Start overview',
+                        'product_item_id': 'Start_overview',
                         "product_item_title": 'Start overview',
                         'src_img_item': './img/star/1.jpg',
                         "img_caption": 'start',
@@ -840,7 +840,7 @@ export const libraryData =
             "product__data":
                 [
                     {
-                        "product_item_id": 'Constellation overview',
+                        "product_item_id": 'Constellation_overview',
                         "product_item_title": 'Constellation overview',
                         'src_img_item': './img/constellation/1.jpg',
                         "img_caption": 'aquarius',
@@ -1282,7 +1282,7 @@ export const libraryData =
             "product__data":
                 [
                     {
-                        "product_item_id": 'What is a space probe',
+                        "product_item_id": 'What_is_a_space_probe',
                         "product_item_title": 'What is a space probe?',
                         'src_img_item': '',
                         "img_caption": '',
@@ -1597,7 +1597,7 @@ export const libraryData =
             "product__data":
                 [
                     {
-                        "product_item_id": 'astronomical observatories',
+                        "product_item_id": 'astronomical_observatories',
                         "product_item_title": 'Astronomical observatories',
                         'src_img_item': '',
                         "img_caption": '',
@@ -2312,7 +2312,7 @@ export const libraryData =
             "product__data":
                 [
                     {
-                        "product_item_id": 'Comet overview',
+                        "product_item_id": 'Comet_overview',
                         "product_item_title": 'Comet overview',
                         'src_img_item': './img/comet/1.jpg',
                         "img_caption": 'photo of a comet',
@@ -2692,7 +2692,7 @@ export const libraryData =
             "product__data":
                 [
                     {
-                        "product_item_id": 'The Most Famous Astronomers of All Time',
+                        "product_item_id": 'The_Most_Famous_Astronomers_of_All_Time',
                         "product_item_title": 'The Most Famous Astronomers of All Time',
                         'src_img_item': '',
                         "img_caption": '',

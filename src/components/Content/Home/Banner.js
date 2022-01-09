@@ -1,23 +1,27 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 import { latestNewsData } from '../../../data/latestNewsData'
 
 
-function Banner({handleEventAction}) {
+function Banner() {
     return (
         <div className="banner">
             <div id="carouselId" className="carousel slide" data-ride="carousel">
 
                 <div className="carousel-inner" role="listbox">
                     <div className="carousel-item active banner-img">
-                        <img src={require(`../../../img/banner/1.jpg`).default} alt="" onClick={()=>handleEventAction({name:"library",key:"Solar System"})} />
+                        <Link to='/library/Solar_System'>
+                            <img src={require(`../../../img/banner/1.jpg`).default} alt="" />
+                        </Link>
                     </div>
                     {latestNewsData.map((item, i) => {
                         if (i < 5) {
 
                             return (
                                 <div key={i} className='carousel-item banner-img'>
-                                    <img src={require(`../../../${item.src_img_item.slice(2)}`).default} alt="" onClick={()=>handleEventAction({name:"news",key:item.latest_new_item_id})}/>
+                                    <Link to={`/news/${item.latest_new_item_id}`}>
+                                        <img src={require(`../../../${item.src_img_item.slice(2)}`).default} alt="" />
+                                    </Link>
                                     <div className="carousel-caption d-none d-md-block">
                                         <p>{item.img_caption}</p>
                                     </div>

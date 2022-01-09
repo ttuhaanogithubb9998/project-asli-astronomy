@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { latestNewsData } from '../../data/latestNewsData'
 import { libraryData } from '../../data/libraryData';
+import {Link} from 'react-router-dom'
 
 
-
-function Search({ email, phone, handleEventAction }) {
+function Search({ email, phone }) {
     const openMail = () => {
         window.open(`mailto:${email}`)
     }
@@ -59,10 +59,12 @@ function Search({ email, phone, handleEventAction }) {
     return (
         <div className="search"
         >
-            <div className="logo" onClick={() => handleEventAction({ name: "library", key: "Home" })}>
-                <div className="logo-img"><img src={require('../../img/banner/logo.png').default} alt="" /></div>
-                <p className="logo-name">ASLI</p>
-            </div>
+            <Link to='/'>
+                <div className="logo" onClick={() => window.scroll(0, 0)}>
+                    <div className="logo-img"><img src={require('../../img/banner/logo.png').default} alt="" /></div>
+                    <p className="logo-name">ASLI</p>
+                </div>
+            </Link>
             <div className="contact">
                 <div className="contact-email" onClick={() => openMail()}>Email: {email}</div>
                 <div className="contact-phone" onClick={() => openTel()}>Phone: {phone}</div>
@@ -75,11 +77,11 @@ function Search({ email, phone, handleEventAction }) {
                 <p className="search-box-icon"><i className="material-icons" onClick={e => showSearch(e)}>search</i></p>
                 <div className="search-box-group">
                     {latestNewsData.map((item, i) => {
-                        return <p key={i} onClick={() => handleEventAction({ name: "news", key: item.latest_new_item_id })}>{item.latest_new_item_title}</p>
+                        return <Link key={i} to={`/news/${item.latest_new_item_id}`}><p onClick={() => window.scroll(0, 0)}>{item.latest_new_item_title}</p></Link>
                     })}
                     {libraryData.map(item => {
                         return item.product__data.map((p) => {
-                            return <p key={p.product_item_id} onClick={() => handleEventAction({ name: "library", key: item.product_id }, p.product_item_id)}>{p.product_item_title}</p>
+                            return <Link key={p.product_item_id} to={`/library/${item.product_id}`}><p onClick={() => window.scroll(0, 0)}>{p.product_item_title}</p></Link>
                         })
                     })}
                     <span>Dose not exist!</span>

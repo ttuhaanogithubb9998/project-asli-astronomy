@@ -1,9 +1,18 @@
 import React from 'react';
 import './News.scss';
+import { useParams } from 'react-router-dom';
+
 import { latestNewsData } from '../../../data/latestNewsData';
-function News({ keyId }) {
-    const data = latestNewsData.find((item) => item.latest_new_item_id === keyId);
-    
+function News() {
+    let action = useParams()['*'];
+    if (action.includes('/')) {
+        action = action.slice(0, action.indexOf('/'))
+    }
+    const data = latestNewsData.find(item => item.latest_new_item_id === action);
+    if (data === undefined) {
+        window.location.pathname = '/notfound';
+        return ''
+    }
     return (
         <div className='news'>
             <h3 className='news-title'>{data.latest_new_item_title}</h3>

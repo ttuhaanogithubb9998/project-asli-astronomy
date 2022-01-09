@@ -1,9 +1,9 @@
 import React from 'react';
 import './Footer.scss';
-
+import {Link} from 'react-router-dom'
 import FormComment from './FormComment';
 
-function Footer({ email, phone,handleEventAction }) {
+function Footer({ email, phone, handleEventAction }) {
     const openMail = () => {
         window.open(`mailto:${email}`)
     }
@@ -14,10 +14,12 @@ function Footer({ email, phone,handleEventAction }) {
         <div className="footer">
             <div className="row">
                 <div className="col-md-4 col-sm-12">
-                    <div className="logo" onClick={() =>handleEventAction({name:"library",key:"Home"})}>
-                        <div className="logo-img"><img src={require('../../img/banner/logo.png').default} alt="" /></div>
-                        <p className="logo-name">ASLI</p>
-                    </div>
+                    <Link to='/'>
+                        <div className="logo" onClick={() => window.scroll(0, 0)}>
+                            <div className="logo-img"><img src={require('../../img/banner/logo.png').default} alt="" /></div>
+                            <p className="logo-name">ASLI</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <div className="contact" >

@@ -1,6 +1,6 @@
 import React from 'react';
-
-function NavbarItem({ item, handleEventAction }) {
+import { Link } from 'react-router-dom'
+function NavbarItem({ item }) {
 
     const dropDown = (e) => {
         let parent;
@@ -25,13 +25,9 @@ function NavbarItem({ item, handleEventAction }) {
                     {item.map((it, i) => {
                         if (i !== 0) {
                             return (
-                                <div
-                                    key={i}
-                                    className="navbar-item-ul-li"
-                                    onClick={() => handleEventAction({name:"library",key:it})}
-                                >
-                                    {it}
-                                </div>
+                                <Link key={i} to={'/library/' + it.replace(" ", '_')}>
+                                    <div className="navbar-item-ul-li">{it}</div>
+                                </Link>
                             )
                         }
                         return ""
@@ -41,9 +37,9 @@ function NavbarItem({ item, handleEventAction }) {
         )
     } else {
         return (
-            <div className="navbar-item" onClick={() => handleEventAction({name:"library",key:item[0]})}>
-                {item}
-            </div>
+            <Link to={(item[0] === 'Home' && '/Home') || '/library/' + item[0].replace(' ', "_")}>
+                <div className="navbar-item"> {item}</div>
+            </Link>
         );
     }
 }

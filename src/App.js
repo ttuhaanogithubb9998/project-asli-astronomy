@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import React, { useCallback, useState } from 'react';
+import React, { useEffect } from 'react';
 
 
 import Header from './components/Header/Header.js'
@@ -13,15 +13,6 @@ import Footer from './components/Footer/Footer.js'
 
 
 function App() {
-  const [action, setAction] = useState({ name: "library", key: "Home" });
-  const [itemKey, setItemKey] = useState('')
-
-  const handleEventAction = useCallback((action, key = "") => {
-    window.scrollTo(0, 0);
-    setAction(action);
-    setItemKey(key)
-  }, []);
-  
   let y = 0;
   window.onscroll = () => {
     if (window.pageYOffset > 100) {
@@ -41,17 +32,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header handleEventAction={handleEventAction} />
-
-      <Content action={JSON.stringify(action)}
-        itemKey={itemKey}
-        handleEventAction={handleEventAction}
-      />
-
+      <Header />
+      <Content />
       <Footer
         email={"Ausy.asli@gmai.com"}
         phone={"142.857.9999"}
-        handleEventAction={handleEventAction}
       />
     </div>
   );

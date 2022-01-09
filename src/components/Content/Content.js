@@ -1,4 +1,5 @@
-import React,{ useEffect} from 'react';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom'
 
 import './Content.scss'
 
@@ -13,42 +14,47 @@ import FormComment from './FormComment'
 
 
 
-function Content({ action, handleEventAction,itemKey }) {
-    let _action = JSON.parse(action);
-    useEffect(()=>{
-        if(_action.key === "Home"&&window.innerWidth<766) {
-            document.querySelector('.content-2').style.overflowX = 'hidden';
-        }else{
-            document.querySelector('.content-2').style.overflowX = '';
-        }
-    },[_action])
+function Content() {
+    // let action = window.location.pathname
+    // console.log("action")
+        // if(action === "Home"&&window.innerWidth<766) {
+        //     document.querySelector('.content-2').style.overflowX = 'hidden';
+        // }else{
+        //     document.querySelector('.content-2').style.overflowX = '';
+        // }
+
     return (
         <div className="content">
             <div className="content-1">
-                {_action.key === "Home" && <Banner handleEventAction={handleEventAction}/>}
+                <Routes>
+                    <Route path = "/Home/*" element={<Banner />}/>
+                    <Route path = "/" element={<Banner />}/>
+                </Routes>
             </div>
             <div className="content-2" >
                 <div className="row">
                     <div className="col-md-9 col-sm-12">
-                        {_action.key === "Home" &&
-                            <Home handleEventAction={handleEventAction} />
-                        }
-                        {_action.name === "library" && _action.key !== "Home" && <Library action={_action.key} itemKey={itemKey} />}
-                        {_action.name === "news" && _action.key !== "Home" && <News keyId={_action.key} />}
+                        <Routes>
+                            <Route path ={"/"}  element = {<Home  />}/>
+                            <Route path ={"/Home/*"}  element = {<Home  />}/>
+                            <Route path ={"/library/*"} element = {<Library  />}/>
+                            <Route path ={"/news/*"} element = {<News />}/>
+                            <Route path='/*' element = {<div>trang web khong ton tai</div>}/>
+                        </Routes>
                     </div>
                     <div className="col-md-3 col-sm-12">
                         <div className="content-2-right">
                             <FormComment />
-                            <ListNews handleEventAction={handleEventAction}/>
+                            <ListNews />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="content-3">
-                <RandomNews handleEventAction={handleEventAction} />
+                <RandomNews  />
             </div>
         </div>
     );
 }
 
-export default React.memo(Content);
+export default Content;
