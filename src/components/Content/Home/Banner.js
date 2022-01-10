@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { latestNewsData } from '../../../data/latestNewsData'
 
 
-function Banner() {
+function Banner({pathGit}) {
     return (
         <div className="banner">
             <div id="carouselId" className="carousel slide" data-ride="carousel">
 
                 <div className="carousel-inner" role="listbox">
                     <div className="carousel-item active banner-img">
-                        <Link to='/library/Solar_System'>
+                        <Link to={`${pathGit}/library/Solar_System`}>
                             <img src={require(`../../../img/banner/1.jpg`).default} alt="" />
                         </Link>
                     </div>

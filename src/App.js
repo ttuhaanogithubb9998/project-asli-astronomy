@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import React, { useEffect } from 'react';
+import React,{ useEffect} from 'react';
 
 
 import Header from './components/Header/Header.js'
@@ -24,7 +24,10 @@ function App() {
       y = window.pageYOffset;
     }
   }
-
+  useEffect(()=>{
+    // window.location.pathname = '/project-asli-astronomy'
+  },[])
+ ;
 
   // const handleEventAction = useMemo(() => {
   //   return action => setAction(action);
