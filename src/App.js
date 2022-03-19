@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import React,{ useEffect} from 'react';
+import React, { useEffect } from 'react';
 
 
 import Header from './components/Header/Header.js'
@@ -24,20 +24,24 @@ function App() {
       y = window.pageYOffset;
     }
   }
-  useEffect(()=>{
+  useEffect(() => {
     // window.location.pathname = '/project-asli-astronomy'
-  },[])
- ;
+  }, [])
+    ;
 
   // const handleEventAction = useMemo(() => {
   //   return action => setAction(action);
   // }, [])
 
+
+  const pathGit = '/project-asli-astronomy';
+
   return (
     <div className="App">
-      <Header />
-      <Content />
+      <Header pathGit={pathGit} />
+      <Content pathGit={pathGit} />
       <Footer
+        pathGit={pathGit}
         email={"Ausy.asli@gmai.com"}
         phone={"142.857.9999"}
       />

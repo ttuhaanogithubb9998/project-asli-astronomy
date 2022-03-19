@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-function LibraryNavbar({ data, path }) {
+function LibraryNavbar({ data, path, pathGit }) {
     const dropDown = (e) => {
         let parent;
         if (e.target.children.length > 0) {
@@ -23,7 +23,7 @@ function LibraryNavbar({ data, path }) {
                 {data.product__data.map((item, i) => {
                     return (
                         <div key={i} className='library-navbar-item' >
-                            <Link to={`/library/${path}/${item.product_item_id}`} onClick = {e=>window.scroll(0,0)}>
+                            <Link to={`${pathGit}/library/${path}/${item.product_item_id}`} onClick = {e=>window.scroll(0,0)}>
                                 <span >{i + 1 + ". " + item.product_item_title}</span>
                             </Link>
                         </div>

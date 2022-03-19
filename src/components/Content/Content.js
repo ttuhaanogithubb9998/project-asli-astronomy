@@ -20,7 +20,7 @@ if (!sessionStorage.getItem('path') === 'true') {
 sessionStorage.setItem('path', 'true')
 
 
-function Content() {
+function Content({pathGit}) {
     // let action = window.location.pathname
     // console.log("action")
     // if(action === "Home"&&window.innerWidth<766) {
@@ -28,13 +28,13 @@ function Content() {
     // }else{
     //     document.querySelector('.content-2').style.overflowX = '';
     // }
-    const pathGit = '/project-asli-astronomy';
+    
     return (
         <div className="content">
             <div className="content-1">
                 <Routes>
-                    <Route path={pathGit + "/Home/*"} element={<Banner pathGit={pathGit} />} />
-                    <Route path={pathGit + "/project-asli-astronomy"} element={<Banner pathGit={pathGit} />} />
+                    <Route path={pathGit + "/"} element={<Banner pathGit={pathGit} />} />
+                    <Route path={pathGit + "/Home"} element={<Banner pathGit={pathGit} />} />
                 </Routes>
             </div>
             <div className="content-2" >
@@ -42,7 +42,7 @@ function Content() {
                     <div className="col-md-9 col-sm-12">
                         <Routes>
                             <Route path={pathGit + '/'} element={<Home pathGit={pathGit} />} />
-                            <Route path={pathGit + '/*'} element={<div>trang web khong ton tai</div>} />
+                            <Route path={pathGit + '/*'} element={<div> trang web khong ton tai</div>} />
                             <Route path={pathGit + "/Home/*"} element={<Home pathGit={pathGit} />} />
                             <Route path={pathGit + "/library/*"} element={<Library pathGit={pathGit} />} />
                             <Route path={pathGit + "/news/*"} element={<News pathGit={pathGit} />} />

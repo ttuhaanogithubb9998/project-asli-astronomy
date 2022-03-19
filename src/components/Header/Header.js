@@ -4,15 +4,15 @@ import React from 'react';
 import Navbar from './Navbar/Navbar'
 import Search from './Search';
 
-function Header({handleEventAction}) {
+function Header({pathGit}) {
     return (
         <div className="header">
             <Search
-                handleEventAction = {handleEventAction}
                 email={"Ausy.asli@gmai.com"}
                 phone = {"142.857.9999"}
+                pathGit = {pathGit}
             />
-            <Navbar handleEventAction = {handleEventAction} />
+            <Navbar pathGit = {pathGit} />
         </div>
     );
 }

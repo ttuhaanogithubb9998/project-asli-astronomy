@@ -1,6 +1,6 @@
 import React from 'react';
 import NavbarItem from './NavbarItem';
-function Navbar() {
+function Navbar({pathGit}) {
     const itemMenu = [
         ["Home"],
         ["Discover"],
@@ -44,7 +44,7 @@ function Navbar() {
             <div className="navbar-full-button" onClick={(e) => navbarToggle(e)} ><span ></span></div>
             <div className="navbar">
                 {itemMenu.map((item, i) => {
-                    return <NavbarItem key={i} item={item} />
+                    return <NavbarItem key={i} item={item} pathGit = {pathGit}/>
                 })}
                 <div className="navbar-close" onClick={(e) => navbarClose(e)}></div>
             </div>

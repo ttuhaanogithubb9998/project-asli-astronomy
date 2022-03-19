@@ -9,7 +9,7 @@ import LibraryContent from './LibraryContent';
 
 
 
-function Library() {
+function Library({pathGit}) {
     let action = useParams()['*'];
     if (action.includes('/')) {
         action = action.slice(0, action.indexOf('/'))
@@ -25,7 +25,7 @@ function Library() {
         <div className="library">
             <div className="row">
                 <div className="col-md-4 ">
-                    <LibraryNavbar data={data} path={action} />
+                    <LibraryNavbar data={data} path={action} pathGit={pathGit} />
                 </div>
                 <div className="col-md-8 ">
                     <Routes>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-function NavbarItem({ item }) {
+function NavbarItem({ item ,pathGit}) {
 
     const dropDown = (e) => {
         let parent;
@@ -25,7 +25,7 @@ function NavbarItem({ item }) {
                     {item.map((it, i) => {
                         if (i !== 0) {
                             return (
-                                <Link key={i} to={'/library/' + it.replace(" ", '_')}>
+                                <Link onClick = {e=>window.scroll(0,0)} key={i} to={`${pathGit}/library/` + it.replace(" ", '_')}>
                                     <div className="navbar-item-ul-li">{it}</div>
                                 </Link>
                             )
@@ -37,7 +37,7 @@ function NavbarItem({ item }) {
         )
     } else {
         return (
-            <Link to={(item[0] === 'Home' && '/Home') || '/library/' + item[0].replace(' ', "_")}>
+            <Link onClick = {e=>window.scroll(0,0)} to={(item[0] === 'Home' && `${pathGit}/Home`) || `${pathGit}/library/` + item[0].replace(' ', "_")}>
                 <div className="navbar-item"> {item}</div>
             </Link>
         );
