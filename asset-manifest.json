@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/project-asli-astronomy/static/css/main.6064d289.chunk.css",
-    "main.js": "/project-asli-astronomy/static/js/main.f29739f5.chunk.js",
-    "main.js.map": "/project-asli-astronomy/static/js/main.f29739f5.chunk.js.map",
+    "main.js": "/project-asli-astronomy/static/js/main.aa08c486.chunk.js",
+    "main.js.map": "/project-asli-astronomy/static/js/main.aa08c486.chunk.js.map",
     "runtime-main.js": "/project-asli-astronomy/static/js/runtime-main.2251f242.js",
     "runtime-main.js.map": "/project-asli-astronomy/static/js/runtime-main.2251f242.js.map",
     "static/js/2.f77ab77b.chunk.js": "/project-asli-astronomy/static/js/2.f77ab77b.chunk.js",
@@ -33,6 +33,6 @@
     "static/js/runtime-main.2251f242.js",
     "static/js/2.f77ab77b.chunk.js",
     "static/css/main.6064d289.chunk.css",
-    "static/js/main.f29739f5.chunk.js"
+    "static/js/main.aa08c486.chunk.js"
   ]
 }
