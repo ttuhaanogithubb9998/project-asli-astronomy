@@ -3,7 +3,7 @@ import './Footer.scss';
 import {Link} from 'react-router-dom'
 import FormComment from './FormComment';
 
-function Footer({ email, phone, handleEventAction }) {
+function Footer({ email, phone }) {
     const openMail = () => {
         window.open(`mailto:${email}`)
     }

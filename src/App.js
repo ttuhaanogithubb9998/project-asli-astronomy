@@ -24,24 +24,15 @@ function App() {
       y = window.pageYOffset;
     }
   }
-  useEffect(() => {
-    // window.location.pathname = '/project-asli-astronomy'
-  }, [])
-    ;
-
-  // const handleEventAction = useMemo(() => {
-  //   return action => setAction(action);
-  // }, [])
-
+ 
 
   const pathGit = '/project-asli-astronomy';
 
   return (
     <div className="App">
-      <Header pathGit={pathGit} />
-      <Content pathGit={pathGit} />
+      <Header />
+      <Content  />
       <Footer
-        pathGit={pathGit}
         email={"Ausy.asli@gmai.com"}
         phone={"142.857.9999"}
       />

@@ -2365,7 +2365,7 @@ export const libraryData =
                     {
                         "product_item_title": '109P/Swift-Tuttle',
                         "product_item_id": 'swift_Tuttle',
-                        'src_img_item': './img/comet/swift_Tuttle/1.jpg',
+                        'src_img_item': './img/comet/swift_tuttle/1.jpg',
                         "img_caption": 'COMET 109P/SWIFT-TUTTLE Comet 109P/Swift-Tuttle is a large comet with a nucleus 26 kilometers (16 miles) across.',
                         "product_item_description":
                             [

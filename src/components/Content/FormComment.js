@@ -1,6 +1,6 @@
 import React from 'react';
 import FormCommentN from '../Footer/FormComment'
-function FormComment(props) {
+function FormComment() {
     const showForm = (e) => {
         let f = e.target.parentElement.parentElement
         let message = f.children[1].value

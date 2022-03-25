@@ -3,7 +3,7 @@ import { latestNewsData } from '../../../data/latestNewsData'
 import { Link } from 'react-router-dom'
 
 
-function RandomNews({pathGit}) {
+function RandomNews() {
     const arr = [];
     let number;
     let check;
@@ -21,7 +21,7 @@ function RandomNews({pathGit}) {
                 let item = latestNewsData[i];
                 return (
                     <div key={i} className="col-md-3 col-sm-6 col" >
-                        <Link to={`${pathGit}/news/${item.latest_new_item_id}`}>
+                        <Link to={`/news/${item.latest_new_item_id}`}>
                             <div className="card text-left">
                                 <img src={require(`../../../${item.src_img_item.slice(2)}`).default} alt="" onClick={() => window.scroll(0, 0)} />
                                 <div className="card-body">

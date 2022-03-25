@@ -10,9 +10,9 @@ function Header({pathGit}) {
             <Search
                 email={"Ausy.asli@gmai.com"}
                 phone = {"142.857.9999"}
-                pathGit = {pathGit}
+                
             />
-            <Navbar pathGit = {pathGit} />
+            <Navbar  />
         </div>
     );
 }

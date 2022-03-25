@@ -13,7 +13,7 @@ const schema = yup.object({
 }).required();
 
 
-function FormComment(props) {
+function FormComment() {
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     })

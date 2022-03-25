@@ -4,7 +4,7 @@ import { libraryData } from '../../data/libraryData';
 import {Link} from 'react-router-dom'
 
 
-function Search({ email, phone,pathGit }) {
+function Search({ email, phone }) {
     const openMail = () => {
         window.open(`mailto:${email}`)
     }
@@ -59,7 +59,7 @@ function Search({ email, phone,pathGit }) {
     return (
         <div className="search"
         >
-            <Link to={`${pathGit}/`}>
+            <Link to={`/`}>
                 <div className="logo" onClick={() => window.scroll(0, 0)}>
                     <div className="logo-img"><img src={require('../../img/banner/logo.png').default} alt="" /></div>
                     <p className="logo-name">ASLI</p>
@@ -77,11 +77,11 @@ function Search({ email, phone,pathGit }) {
                 <p className="search-box-icon"><i className="material-icons" onClick={e => showSearch(e)}>search</i></p>
                 <div className="search-box-group">
                     {latestNewsData.map((item, i) => {
-                        return <Link key={i} to={`${pathGit}/news/${item.latest_new_item_id}`}><p onClick={() => window.scroll(0, 0)}>{item.latest_new_item_title}</p></Link>
+                        return <Link key={i} to={`/news/${item.latest_new_item_id}`}><p onClick={() => window.scroll(0, 0)}>{item.latest_new_item_title}</p></Link>
                     })}
                     {libraryData.map(item => {
                         return item.product__data.map((p) => {
-                            return <Link key={p.product_item_id} to={`${pathGit}/library/${item.product_id}`}><p onClick={() => window.scroll(0, 0)}>{p.product_item_title}</p></Link>
+                            return <Link key={p.product_item_id} to={`/library/${item.product_id}`}><p onClick={() => window.scroll(0, 0)}>{p.product_item_title}</p></Link>
                         })
                     })}
                     <span>Dose not exist!</span>

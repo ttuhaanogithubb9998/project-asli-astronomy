@@ -9,11 +9,12 @@ import LibraryContent from './LibraryContent';
 
 
 
-function Library({pathGit}) {
+function Library() {
     let action = useParams()['*'];
     if (action.includes('/')) {
         action = action.slice(0, action.indexOf('/'))
     }
+    console.log(action)
     const data = libraryData.find(item => item.product_id === action.replace('_', ' '));
 
     if (data === undefined) {
@@ -25,7 +26,7 @@ function Library({pathGit}) {
         <div className="library">
             <div className="row">
                 <div className="col-md-4 ">
-                    <LibraryNavbar data={data} path={action} pathGit={pathGit} />
+                    <LibraryNavbar data={data} path={action}  />
                 </div>
                 <div className="col-md-8 ">
                     <Routes>
@@ -40,4 +41,4 @@ function Library({pathGit}) {
     );
 }
 
-export default Library;
+export default React.memo(Library,false);
